@@ -21,6 +21,9 @@ Reference
 Data Model Design guide for MongoDB
 - http://docs.mongodb.org/master/MongoDB-data-models-guide.pdf
 
+- https://www.mongodb.com/blog/post/thinking-documents-part-1?jmp=docs
+
+
 몽고DB 데이터설계
 - http://hongtaey.tistory.com/?page=2
 

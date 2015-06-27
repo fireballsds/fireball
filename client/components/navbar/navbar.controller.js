@@ -5,6 +5,10 @@ angular.module('fireballApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    },
+    {
+      'title': 'Shimdx',
+      'link': '/shimdx'
     }];
 
     $scope.isCollapsed = true;

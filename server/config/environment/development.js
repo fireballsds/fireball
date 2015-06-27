@@ -8,5 +8,5 @@ module.exports = {
     uri: 'mongodb://fireball:1234qwer@ds035740.mongolab.com:35740/fireball'
   },
 
-  seedDB: true
+  seedDB: false
 };

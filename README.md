@@ -23,3 +23,6 @@ Data Model Design guide for MongoDB
 
 몽고DB 데이터설계
 - http://hongtaey.tistory.com/?page=2
+
+Git commands
+- http://blog.outsider.ne.kr/572

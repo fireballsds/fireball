@@ -9,7 +9,11 @@ angular.module('fireballApp')
     {
       'title': 'Shimdx',
       'link': '/shimdx'
-    }];
+  },
+  {
+      'title': 'Minute Management',
+      'link': '/minutes'
+  }];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

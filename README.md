@@ -14,6 +14,7 @@ Reference
 - MongoDB hosting: https://mongolab.com/
 - Bootstrap Component: http://getbootstrap.com/components/ 
 - Bootstrap CSS(ko): http://bootstrapk.com/css/
+- Angular Generator: https://github.com/DaftMonk/generator-angular-fullstack
 
 6 Rules for Scheme Design
 - http://blog.mongodb.org/post/87200945828/6-rules-of-thumb-for-mongodb-schema-design-part-1
@@ -28,4 +29,4 @@ Data Model Design guide for MongoDB
 - http://hongtaey.tistory.com/?page=2
 
 Git commands
-- http://blog.outsider.ne.kr/572
+- (ko) http://blog.outsider.ne.kr/572

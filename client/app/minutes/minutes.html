@@ -18,23 +18,23 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div class="tabbable" id="tabs-464487" ng-controller="TabCtrl as tabCtrl">
+            <div class="tabbable">
                 <ul class="nav nav-tabs">
-                    <li ng-class="{active: tabCtrl.isSet(1)}">
-                        <a href ng-click="tabCtrl.setTab(1)">Summary</a>
+                    <li ng-class="{active: isSet(1)}">
+                        <a href ng-click="setTab(1)">Summary</a>
                     </li>
-                    <li ng-class="{active: tabCtrl.isSet(2)}">
-                        <a href ng-click="tabCtrl.setTab(2)">Add</a>
+                    <li ng-class="{active: isSet(2)}">
+                        <a href ng-click="setTab(2)">Add</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane active" ng-show="tabCtrl.isSet(1)">
+                    <div ng-show="isSet(1)">
                         <p>
                             I'm in Section 1.
                         </p>
                         <minutes-summary></minutes-summary>
                     </div>
-                    <div class="tab-pane" ng-show="tabCtrl.isSet(2)">
+                    <div ng-show="isSet(2)">
                         <p>
                             Howdy, I'm in Section 2.
                         </p>
@@ -46,11 +46,4 @@
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p>Angular Fullstack v2.0.13 |
-            <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-            <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a>
-        </p>
-    </div>
-</footer>
+<div ng-include="'components/footer/footer.html'"></div>

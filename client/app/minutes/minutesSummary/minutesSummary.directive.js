@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('fireballApp')
-  .directive('minutesAdd', function () {
+  .directive('minutesSummary', function () {
     return {
-      templateUrl: 'app/minutesAdd/minutesAdd.html',
+      templateUrl: 'app/minutes/minutesSummary/minutesSummary.html',
       restrict: 'EA',
       link: function (scope, element, attrs) {
       }

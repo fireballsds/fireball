@@ -2,11 +2,14 @@
 
 angular.module('fireballApp')
   .controller('AgendaCtrl', function ($scope, $http, socket) {
-    $scope.dailyAgendas = [];
+    $scope.agendas = [];
 
-    $http.get('/api/agendas').success(function(dailyAgendas) {
-      $scope.dailyAgendas = dailyAgendas;
-      socket.syncUpdates('agenda', $scope.dailyAgendas);
+    $http.get('/api/agendas').success(function(agendas) {
+      $scope.agendas = agendas;
+      for (var i=0;i<agendas.length;i++){
+        agendas[i].imgNo=Math.floor((Math.random() * 9) + 1);
+      }
+      socket.syncUpdates('agenda', $scope.agendas);
     });
 
     $scope.addAgenda = function() {

@@ -34,11 +34,12 @@
   					</tr>
   				</tbody>
   			</table>
+        <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true"></pagination>
       </div>
       <div class="col-md-4">
         <form class="agenda-form">
           <label><h4>Add agenda here</h4></label>
-          <p><input name="title" type="text" class="form-control" placeholder="Add a new agenda here." ng-model="newAgenda.title"></input></p>
+          <p><input type="text" class="form-control" placeholder="Add a new agenda here." ng-model="newAgenda.title"></input></p>
           <p><input type="text" class="form-control" placeholder="Description here." ng-model="newAgenda.description"></input></p>
           <p><input type="text" class="form-control" placeholder="Responsibility here." ng-model="newAgenda.responsibility"></input></p>
           </p><button type="submit" class="btn btn-primary" ng-click="addAgenda()">Add New</button></p>

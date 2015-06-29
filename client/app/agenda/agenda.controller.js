@@ -3,6 +3,7 @@
 angular.module('fireballApp')
   .controller('AgendaCtrl', function ($scope, $http, socket) {
     $scope.agendas = [];
+    $scope.newAgenda = {};
 
     $http.get('/api/agendas').success(function(agendas) {
       $scope.agendas = agendas;
@@ -18,6 +19,7 @@ angular.module('fireballApp')
         return;
       }
       $http.post('/api/agendas', $scope.newAgenda);
+      console.log($scope.newAgenda);
       $scope.newAgenda = '';
     };
 

@@ -1,3 +1,33 @@
-<div class="col-md-12">
-This is the agenda view.
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="hero-unit" id="banner" ng-repeat="agenda in dailyAgendas">
+    <h2>{{agenda.title}}</h1>
+    <p class="lead">" {{agenda.description}} "- {{agenda.responsibility}}</p>
+  </div>
+</header>
+
+<!--div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Daily Agenda:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="agenda in dailyAgendas">
+        <li><a href="#" tooltip="{{agenda.description}}">{{agenda.title}}<button type="button" class="close" ng-click="deleteAgenda(agenda)">&times;</button></a></li>
+      </ul>
+    </div>
+  </div-->
+
+  <form class="agenda-form">
+    <label>Add the agenda</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new agenda here." ng-model="newAgenda.title">
+      <input type="text" class="form-control" placeholder="Description here." ng-model="newAgenda.description">
+      <input type="text" class="form-control" placeholder="Responsibility here." ng-model="newAgenda.responsibility">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="addAgenda()">Add New</button>
+      </span>
+    </p>
+  </form>
 </div>
+
+<div ng-include="'components/footer/footer.html'"></div>

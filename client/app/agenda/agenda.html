@@ -1,0 +1,53 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container-fluid">
+  <div class="row">
+    <carousel interval="5000">
+      <slide ng-repeat="agenda in agendas" active="agenda.active">
+        <img ng-src="http://lorempixel.com/output/nature-q-c-1600-500-{{agenda.imgNo}}.jpg" style="margin:auto;">
+        <div class="carousel-caption">
+          <h1>{{agenda.title}}</h1>
+          <p>{{agenda.description}} "- {{agenda.responsibility}}</p>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+  <br/>
+  <tabset>
+    <tab heading="Open Agendas">
+      <br/>
+  		<div class="col-md-8">
+      	<table class="table">
+  				<thead>
+  					<tr>
+  						<th width="5%">#</th>
+  						<th width="60%">Title</th>
+  						<th width="15%">Due Date</th>
+  						<th width="20%">Resp.</th>
+  					</tr>
+  				</thead>
+  				<tbody>
+  					<tr ng-repeat="agenda in agendas">
+  						<td>{{$index+1}}</td>
+  						<td>{{agenda.description}}</td>
+  						<td>{{agenda.regDate | date:'dd MMM'}}</td>
+  						<td>{{agenda.responsibility}}<button type="button" class="close" ng-click="deleteAgenda(agenda)">&times;</button></td>
+  					</tr>
+  				</tbody>
+  			</table>
+      </div>
+      <div class="col-md-4">
+        <form class="agenda-form">
+          <label><h4>Add agenda here</h4></label>
+          <p><input name="title" type="text" class="form-control" placeholder="Add a new agenda here." ng-model="newAgenda.title"></input></p>
+          <p><input type="text" class="form-control" placeholder="Description here." ng-model="newAgenda.description"></input></p>
+          <p><input type="text" class="form-control" placeholder="Responsibility here." ng-model="newAgenda.responsibility"></input></p>
+          </p><button type="submit" class="btn btn-primary" ng-click="addAgenda()">Add New</button></p>
+        </form>
+      </div>
+    </tab>
+    <tab heading="Closed Agendas">
+    </tab>
+  </tabset>
+</div>
+
+<div ng-include="'components/footer/footer.html'"></div>

@@ -2,13 +2,10 @@
 
 angular.module('fireballApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
-    },
+    $scope.menu = [
     {
-      'title': 'Shimdx',
-      'link': '/shimdx'
+      'title': 'Agenda',
+      'link': '/agenda'
   },
   {
       'title': 'Minute Management',

@@ -1,5 +1,8 @@
 .carousel-inner .item {
-  max-height: 200px;
+  max-height: 200px; min-height: 200px;
+}
+.carosuel-inner .item .img {
+  min-height: 200px;
 }
 .navbar{
   margin-bottom:0px;
